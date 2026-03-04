@@ -1,4 +1,4 @@
----
+
 
 # 🏥 AI Health Assistant – Medical Chatbot 🤖
 
@@ -11,11 +11,13 @@ An AI-powered Medical Chatbot built with NLP and Streamlit that provides:
 
 This chatbot helps users receive health guidance in multiple languages through an interactive web interface.
 
----
+
+
 🌐 Live Demo
 
 🚀 Try the App Here:
 👉 https://ai-health-assistant-deepak.streamlit.app/
+
 
 
 🖼️ Application Screenshot
