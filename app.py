@@ -78,8 +78,19 @@ health_tips = {
     ],
 }
 
-def translate_text(text,dest_language='en'):
-    return GoogleTranslator(source='auto',target=dest_language).translate(text)
+# def translate_text(text,dest_language='en'):
+#     return GoogleTranslator(source='auto',target=dest_language).translate(text)
+
+@st.cache_data(ttl=3600)
+def translate_text(text,dest_language):
+    if not text:
+        return text
+    try :
+        return GoogleTranslator(source="auto",target=dest_language).translate()
+    except Exception as e:
+        print(f"Translation error: {e}")
+        return text
+                                
 
 def get_personalized_health_tip(user_input):
     user_input_lower = user_input.lower()
